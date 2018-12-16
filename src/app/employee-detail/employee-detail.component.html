@@ -1,0 +1,15 @@
+<div *ngIf="employee">
+  <h2>{{employee.firstName | uppercase }} {{employee.lastName | uppercase}} Details</h2>
+  <div>
+    <label>Voornaam:
+      <input [(ngModel)]="employee.firstName" placeholder="voornaam">
+    </label>
+    <br><br>
+    <label>Achternaam:
+      <input [(ngModel)]="employee.lastName" placeholder="achternaam">
+    </label>
+  </div>
+
+  <button (click)="save()">Opslaan</button>
+  <button (click)="goBack()">Terug</button>
+</div>

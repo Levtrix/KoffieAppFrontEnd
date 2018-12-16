@@ -1,0 +1,19 @@
+<h2>Aanbod koffie automaat</h2>
+<ul class="drinks">
+  <li *ngFor="let drink of drinks">
+    <a routerLink="/drink-detail/{{drink.id}}">
+      <span class="badge">&#9679;</span>{{drink.name}}
+    </a>
+    <button class="delete" title="delete drink"
+        (click)="deleteDrink(drink)">x</button>
+  </li>
+</ul>
+
+<h4>Toevoegen:</h4>
+<div>
+  <label>Naam:
+    <input #drinkName />
+  </label><br><br>
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button (click)="addDrink(drinkName.value); drinkName.value=''">Toevoegen</button>
+</div>

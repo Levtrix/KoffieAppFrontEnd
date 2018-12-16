@@ -1,0 +1,11 @@
+<div *ngIf="drink">
+  <h2>{{drink.name | uppercase }} Details</h2>
+  <div>
+    <label>naam:
+      <input [(ngModel)]="drink.name" placeholder="naam">
+    </label>
+  </div>
+
+  <button (click)="save()">Opslaan</button>
+  <button (click)="goBack()">Terug</button>
+</div>

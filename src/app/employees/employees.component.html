@@ -1,0 +1,20 @@
+<h2>Werknemers</h2>
+<ul class="employees">
+  <li *ngFor="let employee of employees">
+    <a routerLink="/employee-detail/{{employee.id}}">
+      <span class="badge">&#9679;</span>{{employee.firstName}} {{employee.lastName}}
+    </a>
+  </li>
+</ul>
+
+<h4>Toevoegen:</h4>
+<div>
+  <label>Voornaam:
+    <input #employeeFirstname />
+  </label><br>
+  <label>Achternaam:
+    <input #employeeLastname />
+  </label><br><br>
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button (click)="addEmployee(employeeFirstname.value, employeeLastname.value); employeeFirstname.value=''; employeeLastname.value=''">Toevoegen</button>
+</div>
