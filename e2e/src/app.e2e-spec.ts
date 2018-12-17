@@ -19,13 +19,20 @@ describe('Koffie App Protractor', () => {
     // browser.get('http://koffie.gledant.nl/drinks');
     browser.get('http://localhost:4200/drinks');
 
-    const list = element.all(by.css('.drinks li'));
-    let temp = list.length;
-    temp++;
-
-    element(by.cssContainingText('label', 'Naam:')).element(by.id('drinkName')).sendKeys('Test');
+    element(by.css('input')).sendKeys('Test');
+    // element(by.cssContainingText('label', 'Naam:')).element(by.id('drinkName')).sendKeys('Test');
     element(by.buttonText('Toevoegen')).click();
 
-    expect(list.length).toBe(temp);
+    expect(element.all(by.css('a')).getText()).toContain('●Test');
+  });
+
+  it('should delete a drink', function() {
+    browser.get('http://localhost:4200/drinks');
+    browser.sleep(2000);
+
+    const byTest = element(by.cssContainingText('.badge', '●Test'));
+    byTest.element(by.buttonText('x')).click();
+
+    expect(browser.isElementPresent(by.cssContainingText('.badge', '●Test'))).toBeUndefined();
   });
 });
