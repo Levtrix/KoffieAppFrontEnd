@@ -12,6 +12,8 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
 import { EmployeesComponent } from './employees/employees.component';
 import { EmployeeDetailComponent } from './employee-detail/employee-detail.component';
+import { OrderDetailComponent } from './order-detail/order-detail.component';
+import { OrderSaveComponent } from './order-save/order-save.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { EmployeeDetailComponent } from './employee-detail/employee-detail.compo
     MessagesComponent,
     DashboardComponent,
     EmployeesComponent,
-    EmployeeDetailComponent
+    EmployeeDetailComponent,
+    OrderDetailComponent,
+    OrderSaveComponent
   ],
   imports: [
     BrowserModule,

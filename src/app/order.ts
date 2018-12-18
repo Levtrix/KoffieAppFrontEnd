@@ -10,8 +10,8 @@ export class Order {
 
   constructor(_id: number, _employee: Employee, _drink: Drink, _sugarAmount: number, _milkAmount: number) {
     this.id = _id;
-    this.employee = _employee;
-    this.drink = _drink;
+    this.employee = new Employee(_employee.id, _employee.firstName, _employee.lastName);
+    this.drink = new Drink(_drink.id, _drink.name);
     this.sugarAmount = _sugarAmount;
     this.milkAmount = _milkAmount;
   }

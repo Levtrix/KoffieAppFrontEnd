@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./drinks.component.css']
 })
 export class DrinksComponent implements OnInit {
-  drinks: Drink[];
+  drinks: Drink[] = [];
 
   constructor(private drinkService: DrinkService) { }
 

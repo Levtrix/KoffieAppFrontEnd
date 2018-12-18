@@ -1,0 +1,20 @@
+<div *ngIf="order">
+  <h2>{{order.employee.firstName | uppercase }} {{order.employee.lastName | uppercase }}&#39;s Order</h2>
+  <div>
+    <label>Drinken:</label><br>
+      <select [(ngModel)]="order.drink.id">
+      <option *ngFor="let drink of drinks" [ngValue]="drink.id">{{drink.name}}</option>
+    </select>
+    <br><br>
+    <label>Hoeveelheid suiker:
+      <input type="number" [(ngModel)]="order.sugarAmount" placeholder="0">
+    </label>
+    <br><br>
+    <label>Hoeveelheid melk:
+      <input type="number" [(ngModel)]="order.milkAmount" placeholder="0">
+    </label>
+  </div>
+
+  <button (click)="save()">Opslaan</button>
+  <button (click)="goBack()">Terug</button>
+</div>

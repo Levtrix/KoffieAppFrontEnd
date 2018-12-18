@@ -9,14 +9,12 @@ describe('Koffie App Protractor', () => {
   });
 
   it('should have a title', function() {
-    // browser.get('http://koffie.gledant.nl');
     browser.get('http://localhost:4200');
 
     expect(browser.getTitle()).toEqual('Koffie App');
   });
 
   it('should add a drink', function() {
-    // browser.get('http://koffie.gledant.nl/drinks');
     browser.get('http://localhost:4200/drinks');
 
     element(by.css('input')).sendKeys('Test');

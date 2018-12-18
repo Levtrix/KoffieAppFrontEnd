@@ -1,4 +1,5 @@
 <h3>WIP: Edit this page to show all current orders!</h3>
+<!--
 <div class="grid grid-pad">
   <a *ngFor="let drink of drinks" class="col-1-4"
       routerLink="/drink-detail/{{drink.id}}">
@@ -7,3 +8,15 @@
     </div>
   </a>
 </div>
+-->
+
+<ul class="orders">
+  <li *ngFor="let order of orders">
+    <a routerLink="/order-detail/{{order.id}}">
+      <span class="badge">&#9679;</span>{{order.employee.firstName}} {{order.employee.lastName}}, {{order.drink.name}},
+      suiker: {{order.sugarAmount}}, melk: {{order.milkAmount}}
+    </a>
+    <button class="delete" title="delete order"
+      (click)="deleteOrder(order)">x</button>
+  </li>
+</ul>
