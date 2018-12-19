@@ -20,3 +20,29 @@
       (click)="deleteOrder(order)">x</button>
   </li>
 </ul>
+<br><br>
+
+<h4>Order toevoegen</h4>
+<div>
+  <select [(ngModel)]="employee" id="employeeslist" (change)="onEmployeeChange(employee)">
+    <option value="" disabled selected>Selecteer je naam</option>
+    <option *ngFor="let employee of employees" [ngValue]="employee">{{employee.firstName}} {{employee.lastName}}</option>
+  </select>
+  <br><br>
+  <select [(ngModel)]="drink" id="drinkslist" (change)="onDrinkChange(drink)">
+    <option value="" disabled selected>Selecteer je keuze</option>
+    <option *ngFor="let drink of drinks" [ngValue]="drink">{{drink.name}}</option>
+  </select>
+  <br><br>
+  <label>Hoeveelheid suiker:
+    <input type="number" #sugarAmount placeholder="0">
+  </label>
+  <br><br>
+  <label>Hoeveelheid melk:
+    <input type="number" #milkAmount placeholder="0">
+  </label>
+  <br><br>
+  <button (click)="addOrder(sugarAmount.value, milkAmount.value); sugarAmount.value=0; milkAmount.value=0;">
+    Toevoegen
+  </button>
+</div>

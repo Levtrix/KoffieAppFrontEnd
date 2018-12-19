@@ -8,7 +8,7 @@ export class Order {
   sugarAmount: number;
   milkAmount: number;
 
-  constructor(_id: number, _employee: Employee, _drink: Drink, _sugarAmount: number, _milkAmount: number) {
+  constructor(_employee: Employee, _drink: Drink, _sugarAmount: number, _milkAmount: number, _id?: number) {
     this.id = _id;
     this.employee = new Employee(_employee.id, _employee.firstName, _employee.lastName);
     this.drink = new Drink(_drink.id, _drink.name);

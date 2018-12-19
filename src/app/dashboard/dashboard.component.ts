@@ -15,6 +15,8 @@ export class DashboardComponent implements OnInit {
   orders: Order[];
   employees: Employee[];
   drinks: Drink[];
+  employee: Employee = new Employee;
+  drink: Drink = new Drink;
 
   constructor(
     private drinkService: DrinkService,
@@ -41,5 +43,31 @@ export class DashboardComponent implements OnInit {
   getOrders(): void {
     this.orderService.getOrders()
       .subscribe(orders => this.orders = orders);
+  }
+
+  addOrder(sugarAmount: number, milkAmount: number): void {
+    if ((!this.employee) || (!this.drink) || (!sugarAmount) || (!milkAmount)) { return; }
+
+    this.orderService.addOrder(this.buildNewOrderObject(this.employee, this.drink, sugarAmount, milkAmount))
+      .subscribe(order => {
+        this.orders.push(order);
+      });
+  }
+
+  deleteOrder(order: Order): void {
+    this.orders = this.orders.filter(o => o !== order);
+    this.orderService.deleteOrder(order).subscribe();
+  }
+
+  onEmployeeChange(employee: Employee): void {
+    this.employee = employee;
+  }
+
+  onDrinkChange(drink: Drink): void {
+    this.drink = drink;
+  }
+
+  private buildNewOrderObject(employee: Employee, drink: Drink, sugarAmount: number, milkAmount: number): Order {
+    return new Order(employee, drink, sugarAmount, milkAmount);
   }
 }
