@@ -1,4 +1,4 @@
-/* DashboardComponent's private CSS styles */
+/* DashboardComponent's private CSS styles
 [class*='col-'] {
   float: left;
   padding-right: 20px;
@@ -14,13 +14,14 @@ a {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-}
+} */
 h3 {
   text-align: center; margin-bottom: 0;
 }
 h4 {
   position: relative;
 }
+/*
 .grid {
   margin: 0;
 }
@@ -59,7 +60,7 @@ h4 {
   .module {
     min-width: 60px;
   }
-}
+} */
 
 /* ORDERS LIST TEMP STYLE*/
 .orders {
