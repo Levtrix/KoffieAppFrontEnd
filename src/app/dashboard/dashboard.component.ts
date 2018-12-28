@@ -30,6 +30,11 @@ export class DashboardComponent implements OnInit {
     this.getEmployees();
   }
 
+  getOrders(): void {
+    this.orderService.getOrders()
+      .subscribe(orders => this.orders = orders);
+  }
+
   getDrinks(): void {
     this.drinkService.getDrinks()
       .subscribe(drinks => this.drinks = drinks);
@@ -38,11 +43,6 @@ export class DashboardComponent implements OnInit {
   getEmployees(): void {
     this.employeeService.getEmployees()
       .subscribe(employees => this.employees = employees);
-  }
-
-  getOrders(): void {
-    this.orderService.getOrders()
-      .subscribe(orders => this.orders = orders);
   }
 
   addOrder(sugarAmount: number, milkAmount: number): void {
