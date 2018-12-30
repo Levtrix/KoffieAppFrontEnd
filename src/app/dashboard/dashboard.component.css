@@ -5,7 +5,7 @@
   margin: 0 0 2em 0;
   list-style-type: none;
   padding: 0;
-  width: 15em;
+  width: 35em;
 }
 .orders li {
   position: relative;
@@ -13,7 +13,7 @@
   background-color: #EEE;
   margin: .5em;
   padding: .3em 0;
-  height: 1.6em;
+  height: 2em;
   border-radius: 4px;
 }
 
@@ -28,7 +28,7 @@
   text-decoration: none;
   position: relative;
   display: block;
-  width: 250px;
+  width: 400px;
 }
 
 .orders a:hover {
@@ -45,7 +45,7 @@
   position: relative;
   left: -1px;
   top: -4px;
-  height: 1.8em;
+  height: 2.2em;
   min-width: 16px;
   text-align: right;
   margin-right: .8em;
@@ -68,7 +68,7 @@ button:hover {
 
 button.delete {
   position: relative;
-  left: 194px;
+  left: 510px;
   top: -32px;
   background-color: gray !important;
   color: white;
@@ -76,7 +76,7 @@ button.delete {
 
 label {
   display: inline-block;
-  width: 3em;
+  width: 25em;
   margin: .5em 0;
   color: #607D8B;
   font-weight: bold;
