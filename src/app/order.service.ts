@@ -15,7 +15,7 @@ const httpOptions = {
 
 export class OrderService {
   private koffieUrl = 'http://koffie.gledant.nl:8095/order'; // URL to web api
-  private inMemoryUrl = 'api/drinks'; // URL to in memory context db
+  private inMemoryUrl = 'api/orders'; // URL to in memory context db
 
   constructor(
     private http: HttpClient,
