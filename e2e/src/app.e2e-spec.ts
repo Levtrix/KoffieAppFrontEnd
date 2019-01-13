@@ -10,6 +10,7 @@ describe('Koffie App Protractor', () => {
 
   it('should have a title', function() {
     browser.get('http://localhost:4200');
+    browser.waitForAngularEnabled(false);
 
     expect(browser.getTitle()).toEqual('Koffie App');
   });
@@ -24,7 +25,6 @@ describe('Koffie App Protractor', () => {
     expect(element.all(by.css('a')).getText()).toContain('●Test');
   });
 
-  /**
   it('should delete a drink', function() {
     browser.get('http://localhost:4200/drinks');
     browser.sleep(2000);
@@ -33,5 +33,5 @@ describe('Koffie App Protractor', () => {
     byTest.element(by.buttonText('x')).click();
 
     expect(browser.isElementPresent(by.cssContainingText('.badge', '●Test'))).toBeUndefined();
-  });*/
+  });
 });
