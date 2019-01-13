@@ -15,6 +15,19 @@ describe('Koffie App Protractor', () => {
     expect(browser.getTitle()).toEqual('Koffie App');
   });
 
+  it('should have drinks', function() {
+    browser.get('http://localhost:4200/drinks');
+
+    expect(element.all(by.css('a')).getText()).toContain('●Zwart');
+  });
+
+  it('should have employees', function() {
+    browser.get('http://localhost:4200/employees');
+
+    expect(element.all(by.css('a')).getText()).toContain('●Sanne Pell');
+  });
+
+  /*
   it('should add a drink', function() {
     browser.get('http://localhost:4200/drinks');
 
@@ -25,7 +38,6 @@ describe('Koffie App Protractor', () => {
     expect(element.all(by.css('a')).getText()).toContain('●Test');
   });
 
-  /*
   it('should delete a drink', function() {
     browser.get('http://localhost:4200/drinks');
     browser.sleep(2000);
