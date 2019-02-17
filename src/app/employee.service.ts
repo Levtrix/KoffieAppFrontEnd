@@ -14,7 +14,7 @@ const httpOptions = {
 })
 
 export class EmployeeService {
-  private koffieUrl = 'http://koffie.gledant.nl/employee'; // URL to web api
+  private koffieUrl = 'http://koffie.gledant.nl:8095/employee'; // URL to web api
   private inMemoryUrl = 'api/employees';  // URL to in memory context db
 
   constructor(
