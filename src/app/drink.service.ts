@@ -13,7 +13,7 @@ const httpOptions = {
 })
 
 export class DrinkService {
-  private koffieUrl = 'http://koffie.gledant.nl:8095/drink'; // URL to web api
+  private koffieUrl = 'http://koffie.gledant.nl/drink'; // URL to web api
   private inMemoryUrl = 'api/drinks'; // URL to in memory context db
 
   constructor(
