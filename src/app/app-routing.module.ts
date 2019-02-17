@@ -6,6 +6,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { EmployeesComponent } from './employees/employees.component';
 import { EmployeeDetailComponent } from './employee-detail/employee-detail.component';
+import { NotfoundcomponentComponent } from './notfoundcomponent/notfoundcomponent.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full'},
@@ -14,7 +15,9 @@ const routes: Routes = [
   { path: 'drinks', component: DrinksComponent },
   { path: 'employees', component: EmployeesComponent },
   { path: 'employee-detail/:id', component: EmployeeDetailComponent },
-  { path: 'order-detail/:id', component: OrderDetailComponent }
+  { path: 'order-detail/:id', component: OrderDetailComponent },
+  { path: '404', component: NotfoundcomponentComponent},
+  { path: '**', redirectTo: '/404'}
 ];
 
 @NgModule({
