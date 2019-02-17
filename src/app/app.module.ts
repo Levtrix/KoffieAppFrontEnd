@@ -13,7 +13,7 @@ import { InMemoryDataService } from './in-memory-data.service';
 import { EmployeesComponent } from './employees/employees.component';
 import { EmployeeDetailComponent } from './employee-detail/employee-detail.component';
 import { OrderDetailComponent } from './order-detail/order-detail.component';
-import { NotfoundcomponentComponent } from './notfoundcomponent/notfoundcomponent.component';
+import { NotfoundComponent } from './notfound/notfound.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +25,7 @@ import { NotfoundcomponentComponent } from './notfoundcomponent/notfoundcomponen
     EmployeesComponent,
     EmployeeDetailComponent,
     OrderDetailComponent,
-    NotfoundcomponentComponent,
+    NotfoundComponent
   ],
   imports: [
     BrowserModule,
