@@ -19,14 +19,14 @@ describe('Koffie App Protractor', () => {
     browser.get('http://localhost:4200/drinks');
     browser.waitForAngularEnabled(false);
 
-    expect(element.all(by.css('a')).getText()).toContain('●Zwart');
+    expect(element.all(by.css('a')).getText()).toContain('●Zwart ');
   });
 
   it('should have employees', function() {
     browser.get('http://localhost:4200/employees');
     browser.waitForAngularEnabled(false);
 
-    expect(element.all(by.css('a')).getText()).toContain('●Sanne Pell');
+    expect(element.all(by.css('a')).getText()).toContain('●Sanne Pell ');
   });
 
   /*
