@@ -10,21 +10,21 @@ describe('Koffie App Protractor', () => {
 
   it('should have a title', function() {
     browser.get('http://localhost:4200');
-    browser.waitForAngularEnabled(false);
+    browser.waitForAngularEnabled(true);
 
     expect(browser.getTitle()).toEqual('Koffie App');
   });
 
   it('should have drinks', function() {
     browser.get('http://localhost:4200/drinks');
-    browser.waitForAngularEnabled(false);
+    browser.waitForAngularEnabled(true);
 
     expect(element.all(by.css('a')).getText()).toContain('●Zwart');
   });
 
   it('should have employees', function() {
     browser.get('http://localhost:4200/employees');
-    browser.waitForAngularEnabled(false);
+    browser.waitForAngularEnabled(true);
 
     expect(element.all(by.css('a')).getText()).toContain('●Sanne Pell');
   });
